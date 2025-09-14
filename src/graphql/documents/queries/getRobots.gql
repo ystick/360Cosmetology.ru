@@ -1,0 +1,6 @@
+query getRobotsTxt {
+  robotsTxt {
+    content
+    sitemap
+  }
+}

@@ -1,0 +1,27 @@
+query getUslugasWithPagination($page: Int, $pageSize: Int, $status: PublicationStatus, $filters: UslugaFiltersInput) {
+  uslugas_connection(sort: "order:asc", pagination: { page: $page, pageSize: $pageSize }, status: $status, filters: $filters) {
+    nodes {
+      documentId
+      title
+      slug
+      description
+      mainImage {
+        alternativeText
+        url
+      }
+      createdAt
+      updatedAt
+      publishedAt
+      kategoriya_uslugi {
+        name
+        slug
+      }
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

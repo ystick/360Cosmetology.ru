@@ -1,0 +1,25 @@
+query RezultatyRabotiesImages($page: Int, $pageSize: Int) {
+  rezultatyRaboties_connection(sort: "order:asc", pagination: { page: $page, pageSize: $pageSize }, filters: { isVideo: { eq: false } }) {
+    nodes {
+      documentId
+      order
+      contentImage: content {
+        __typename
+        ... on ComponentResultsOfWorkIzobrazhenie {
+          __typename
+          id
+          image {
+            url
+            alternativeText
+          }
+        }
+      }
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

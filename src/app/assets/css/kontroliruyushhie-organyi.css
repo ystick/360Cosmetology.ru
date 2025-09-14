@@ -1,0 +1,129 @@
+.kontroliruyushhie-organyi_body ol,
+.kontroliruyushhie-organyi_body ul {
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.kontroliruyushhie-organyi_body li {
+  font-size: 16px;
+  color: #473c41;
+  margin-bottom: 16px;
+}
+
+.kontroliruyushhie-organyi_body li:last-child{
+  margin-bottom: 0;
+}
+
+.kontroliruyushhie-organyi_body ol {
+  list-style: decimal;
+}
+
+.kontroliruyushhie-organyi_body ul {
+  list-style: disc;
+}
+
+.kontroliruyushhie-organyi_body a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #282e36;
+}
+
+.long_description {
+  color: #473c41;
+  font-size: 12px;
+  line-height: 110%;
+}
+
+@media (min-width: 768px) {
+  .kontroliruyushhie-organyi_body li {
+    font-size: 19px;
+    line-height: 21px;
+    margin-bottom: 18px;
+  }
+
+  .long_description {
+    color: white;
+  }
+}
+@media (min-width: 1024px) {
+  .long_description {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.kontroliruyushhie-organyi_block_003 h1,
+.kontroliruyushhie-organyi_block_003 h2,
+.kontroliruyushhie-organyi_block_003 h3,
+.kontroliruyushhie-organyi_block_003 h4,
+.kontroliruyushhie-organyi_block_003 h5,
+.kontroliruyushhie-organyi_block_003 h6 {
+  color: #473c41;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.kontroliruyushhie-organyi_block_003 {
+  color: #473c41;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  .kontroliruyushhie-organyi_block_003 h1,
+  .kontroliruyushhie-organyi_block_003 h2,
+  .kontroliruyushhie-organyi_block_003 h3,
+  .kontroliruyushhie-organyi_block_003 h4,
+  .kontroliruyushhie-organyi_block_003 h5,
+  .kontroliruyushhie-organyi_block_003 h6 {
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .kontroliruyushhie-organyi_block_003 {
+    color: #473c41;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.kontroliruyushhie-organyi_block_005 h1,
+.kontroliruyushhie-organyi_block_005 h2,
+.kontroliruyushhie-organyi_block_005 h3,
+.kontroliruyushhie-organyi_block_005 h4,
+.kontroliruyushhie-organyi_block_005 h5,
+.kontroliruyushhie-organyi_block_005 h6 {
+  color: #7da1c4;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.kontroliruyushhie-organyi_block_005 {
+  color: #473c41;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  .kontroliruyushhie-organyi_block_005 h1,
+  .kontroliruyushhie-organyi_block_005 h2,
+  .kontroliruyushhie-organyi_block_005 h3,
+  .kontroliruyushhie-organyi_block_005 h4,
+  .kontroliruyushhie-organyi_block_005 h5,
+  .kontroliruyushhie-organyi_block_005 h6 {
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .kontroliruyushhie-organyi_block_005 {
+    color: #473c41;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

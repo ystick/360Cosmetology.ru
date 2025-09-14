@@ -1,0 +1,10 @@
+query KategoriyaUslugis {
+  kategoriyaUslugis(sort: "order:asc", filters: { uslugis: { documentId: { notNull: true } } }, pagination: { limit: 1000 }) {
+    documentId
+    name
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

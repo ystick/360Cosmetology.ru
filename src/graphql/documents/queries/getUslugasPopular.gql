@@ -1,0 +1,60 @@
+query getUslugasPopular($pagination: PaginationArg, $status: PublicationStatus) {
+  uslugas(sort: ["popularService.order:asc", "order:asc"], pagination: $pagination, status: $status, filters: { popularService: { isPopular: { eq: true } } }) {
+    documentId
+    title
+    slug
+    description
+    mainImage {
+      alternativeText
+      url
+    }
+    price
+    tags {
+      title
+      id
+      idLInk
+    }
+    body {
+      __typename
+
+      ... on ComponentServiceTekstovoePole {
+        id
+        contentPlain: content
+      }
+
+      ... on ComponentServiceTekstovoePoleSBokovojLiniej {
+        id
+        contentSide: content
+      }
+
+      ... on ComponentServiceIzobrazhenieNaVsyuShirinuKontejnera {
+        id
+        contentMedia: content {
+          url
+          alternativeText
+        }
+      }
+    }
+    popularService {
+      id
+      order
+      isPopular
+      mainImage {
+        alternativeText
+        url
+      }
+      title
+    }
+    kategoriya_uslugi {
+      name
+      slug
+    }
+    advantages {
+      id
+      title
+    }
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

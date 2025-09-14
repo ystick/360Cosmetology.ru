@@ -1,0 +1,5 @@
+export const WHATSAPP = 'https://wa.me/79167676919'
+export const TELEGRAM = 'https://t.me/cosmetology360'
+export const INSTAGRAM = 'https://www.instagram.com/360_cosmetology'
+export const VK = 'https://vk.com/cosmetology360'
+export const YOUTUBE = 'https://www.youtube.com/@dr.gubareva'

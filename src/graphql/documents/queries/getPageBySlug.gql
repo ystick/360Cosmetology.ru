@@ -1,0 +1,12 @@
+query getPageBySlug($slug: String!) {
+  pages(filters: { slug: { eq: $slug } }) {
+    title
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

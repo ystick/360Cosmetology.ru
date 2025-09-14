@@ -1,0 +1,25 @@
+query getSotrudniks($filters: SotrudnikFiltersInput, $status: PublicationStatus) {
+  sotrudniks_connection(filters: $filters, status: $status, sort: "order:asc", pagination: { limit: 10, start: 0 }) {
+    nodes {
+      documentId
+      lastName
+      firstName
+      patronymic
+      position
+      photo {
+        alternativeText
+        url
+      }
+      priceFrom
+      priceTo
+      slug
+      createdAt
+      updatedAt
+      publishedAt
+      speczializaczii_sotrudnikas {
+        title
+        documentId
+      }
+    }
+  }
+}

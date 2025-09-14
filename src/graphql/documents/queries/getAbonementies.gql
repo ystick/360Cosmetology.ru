@@ -1,0 +1,15 @@
+query Abonementies($status: PublicationStatus) {
+  abonementies(sort: "order:asc", status: $status) {
+    documentId
+    title
+    description
+    mainImage {
+      url
+      alternativeText
+    }
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

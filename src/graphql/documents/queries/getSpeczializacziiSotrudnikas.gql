@@ -1,0 +1,9 @@
+query getSpeczializacziiSotrudnikas {
+  speczializacziiSotrudnikas(sort: "order:asc", filters: { sotrudnikis: { documentId: { notNull: true } } }) {
+    documentId
+    title
+    sotrudnikis {
+      documentId
+    }
+  }
+}

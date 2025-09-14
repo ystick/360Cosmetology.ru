@@ -1,0 +1,21 @@
+query AkcziyBySlug($slug: String!, $status: PublicationStatus) {
+  akcziis(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    title
+    slug
+    mainImage {
+      url
+      alternativeText
+    }
+    longDescription
+    shortDescription
+    dateStart
+    dateExpired
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

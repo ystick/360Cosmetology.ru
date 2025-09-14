@@ -1,0 +1,23 @@
+query getBlogsWithPagination($page: Int, $pageSize: Int, $status: PublicationStatus) {
+  blogs_connection(pagination: { page: $page, pageSize: $pageSize }, sort: ["datePubpublished:desc", "publishedAt:desc"], status: $status) {
+    nodes {
+      documentId
+      title
+      slug
+      datePubpublished
+      publishedAt
+      createdAt
+      updatedAt
+      mainImage {
+        url
+        alternativeText
+      }
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

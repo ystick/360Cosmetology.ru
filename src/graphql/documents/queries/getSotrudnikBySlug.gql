@@ -1,0 +1,26 @@
+query SotrudnikBySlug($slug: String!, $status: PublicationStatus) {
+  sotrudniks(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    lastName
+    firstName
+    patronymic
+    position
+    photo {
+      alternativeText
+      url
+    }
+    priceFrom
+    priceTo
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+    speczializaczii_sotrudnikas {
+      title
+      documentId
+    }
+    seo {
+      ...seoFragment
+    }
+  }
+}

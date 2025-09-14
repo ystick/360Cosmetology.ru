@@ -1,0 +1,12 @@
+query Otzyvies($status: PublicationStatus) {
+  otzyvies(sort: "order:asc", status: $status) {
+    documentId
+    image {
+      url
+      alternativeText
+    }
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

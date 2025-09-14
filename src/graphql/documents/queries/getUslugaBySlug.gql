@@ -1,0 +1,86 @@
+query getUslugaBySlug($slug: String!, $status: PublicationStatus) {
+  uslugas(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    title
+    slug
+    description
+    mainImage {
+      alternativeText
+      url
+    }
+    price
+    tags {
+      title
+      id
+      idLInk
+    }
+    body {
+      __typename
+
+      ... on ComponentServiceTekstovoePole {
+        id
+        contentJsonText: content
+      }
+
+      ... on ComponentServiceTekstovoePoleSBokovojLiniej {
+        id
+        contentJson: content
+      }
+
+      ... on ComponentServiceIzobrazhenieNaVsyuShirinuKontejnera {
+        id
+        contentMedia: content {
+          url
+          alternativeText
+        }
+      }
+    }
+    advantages {
+      id
+      title
+    }
+    createdAt
+    updatedAt
+    publishedAt
+    author {
+      sotrudnik {
+        documentId
+        lastName
+        firstName
+        patronymic
+        position
+        photo {
+          alternativeText
+          url
+        }
+        priceFrom
+        slug
+        priceTo
+        createdAt
+        updatedAt
+        publishedAt
+      }
+    }
+    resultsWork {
+      images {
+        alternativeText
+        url
+      }
+    }
+    kategoriya_uslugi {
+      name
+      slug
+    }
+    prices {
+      title
+      item(pagination: { limit: 1000 }) {
+        id
+        title
+        price
+      }
+    }
+    seo {
+      ...seoFragment
+    }
+  }
+}

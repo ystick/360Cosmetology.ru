@@ -1,0 +1,54 @@
+query getUslugas($status: PublicationStatus) {
+  uslugas(sort: "order:asc", status: $status) {
+    documentId
+    title
+    slug
+    description
+    mainImage {
+      alternativeText
+      url
+    }
+    price
+    tags {
+      title
+      id
+      idLInk
+    }
+    body {
+      __typename
+
+      ... on ComponentServiceTekstovoePole {
+        id
+        contentPlain: content
+      }
+
+      ... on ComponentServiceTekstovoePoleSBokovojLiniej {
+        id
+        contentSide: content
+      }
+      ... on ComponentServiceIzobrazhenieNaVsyuShirinuKontejnera {
+        id
+        contentMedia: content {
+          url
+          alternativeText
+        }
+      }
+    }
+    kategoriya_uslugi {
+      name
+      slug
+    }
+    popularService {
+      id
+      isPopular
+      mainImage {
+        alternativeText
+        url
+      }
+      title
+    }
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

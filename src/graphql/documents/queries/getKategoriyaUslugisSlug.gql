@@ -1,0 +1,13 @@
+query getKategoriyaUslugisSlug($slug: String!, $status: PublicationStatus) {
+  kategoriyaUslugis(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    name
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

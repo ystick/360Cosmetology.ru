@@ -1,0 +1,23 @@
+query getOborudovaniesWithPagination($page: Int, $pageSize: Int, $status: PublicationStatus) {
+  oborudovanies_connection(sort: "order:asc", pagination: { page: $page, pageSize: $pageSize }, status: $status) {
+    nodes {
+      documentId
+      title
+      slug
+      shortDescription
+      mainImage {
+        url
+        alternativeText
+      }
+      createdAt
+      updatedAt
+      publishedAt
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

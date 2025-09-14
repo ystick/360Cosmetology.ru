@@ -1,0 +1,36 @@
+query OborudovanieBySlug($slug: String!, $status: PublicationStatus) {
+  oborudovanies(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    title
+    slug
+    shortDescription
+    mainImage {
+      url
+      alternativeText
+    }
+    longDescription
+    body {
+      ... on ComponentEquipmentTekstovoePole {
+        id
+        contentJsonText: content
+      }
+      ... on ComponentEquipmentTekstovoePoleSBokovojLiniej {
+        id
+        contentJson: content
+      }
+      ... on ComponentEquipmentIzobrazhenieNaVsyuShirinuKontejnera {
+        id
+        contentMedia: content {
+          url
+          alternativeText
+        }
+      }
+    }
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

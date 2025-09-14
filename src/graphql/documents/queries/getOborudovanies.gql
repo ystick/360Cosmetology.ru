@@ -1,0 +1,15 @@
+query getOborudovanies($status: PublicationStatus) {
+  oborudovanies(sort: "order:asc", status: $status) {
+    documentId
+    title
+    slug
+    shortDescription
+    mainImage {
+      url
+      alternativeText
+    }
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

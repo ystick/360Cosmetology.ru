@@ -1,0 +1,32 @@
+query getSotrudniksWithPagination($page: Int, $pageSize: Int, $status: PublicationStatus, $titles: [String]) {
+  sotrudniks_connection(sort: "order:asc", pagination: { page: $page, pageSize: $pageSize }, status: $status, filters: { speczializaczii_sotrudnikas: { title: { in: $titles } } }) {
+    nodes {
+      order
+      documentId
+      lastName
+      firstName
+      patronymic
+      position
+      photo {
+        alternativeText
+        url
+      }
+      priceFrom
+      priceTo
+      slug
+      createdAt
+      updatedAt
+      publishedAt
+      speczializaczii_sotrudnikas {
+        title
+        documentId
+      }
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

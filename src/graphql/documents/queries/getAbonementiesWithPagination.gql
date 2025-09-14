@@ -1,0 +1,23 @@
+query getAbonementiesWithPagination($page: Int, $pageSize: Int, $status: PublicationStatus) {
+  abonementies_connection(pagination: { page: $page, pageSize: $pageSize }, status: $status) {
+    nodes {
+      documentId
+      title
+      description
+      mainImage {
+        url
+        alternativeText
+      }
+      slug
+      createdAt
+      updatedAt
+      publishedAt
+    }
+    pageInfo {
+      pageCount
+      total
+      pageSize
+      page
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@webp/*": ["./src/app/assets/images/webp/*"],
+      "@videos/*": ["./src/app/assets/videos/*"],
+      "@svg": ["./src/app/assets/images/svg"],
+      "@data/*": ["./src/app/assets/data/*"],
+      "@css/*": ["./src/app/assets/css/*"],
+      "@ui": ["./src/app/components/ui"],
+      "@shared": ["./src/app/components/shared"],
+      "@hooks": ["./src/app/hooks"],
+      "@utils": ["./src/app/utils"],
+      "@utils/api": ["./src/app/utils/api"],
+      "@contexts": ["./src/app/contexts"],
+      "@providers": ["./src/app/providers"],
+      "@interfaces": ["./src/app/interfaces"],
+      "@constants/*": ["./src/app/constants/*"],
+      "@config": ["./src/app/config"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

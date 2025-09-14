@@ -1,0 +1,104 @@
+.services_pricing_body ol,
+.services_pricing_body ul {
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.services_pricing_body li {
+  font-size: 16px;
+  color: #473c41;
+  margin-bottom: 16px;
+}
+
+.services_pricing_body li:last-child{
+  margin-bottom: 0;
+}
+
+.services_pricing_body ol {
+  list-style: decimal;
+}
+
+.services_pricing_body ul {
+  list-style: disc;
+}
+
+.services_pricing_body a {
+  text-decoration: underline;
+}
+
+.long_description {
+  color: #473c41;
+  font-size: 12px;
+  line-height: 110%;
+}
+
+@media (min-width: 768px) {
+  /* .services_pricing_body li {
+    font-size: 19px;
+    line-height: 21px;
+    margin-bottom: 18px;
+  } */
+
+  .long_description {
+    color: white;
+  }
+}
+@media (min-width: 1024px) {
+  .long_description {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.services_pricing_body h1,
+.services_pricing_body h2,
+.services_pricing_body h3,
+.services_pricing_body h4,
+.services_pricing_body h5,
+.services_pricing_body h6 {
+  color: #473c41;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.services_pricing_block_003 {
+  color: #473c41;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  .services_pricing_body h1,
+  .services_pricing_body h2,
+  .services_pricing_body h3,
+  .services_pricing_body h4,
+  .services_pricing_body h5,
+  .services_pricing_body h6 {
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .services_pricing_block_003 {
+    color: #473c41;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.services_pricing_block_005 {
+  color: #473c41;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+
+  .services_pricing_block_005 {
+    color: #473c41;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

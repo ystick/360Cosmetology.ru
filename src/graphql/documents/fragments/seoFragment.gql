@@ -1,0 +1,16 @@
+fragment seoFragment on ComponentSharedSeo {
+  metaTitle
+  metaDescription
+  canonicalUrl
+  isNoIndexPage
+  scripts
+  openGraph {
+    ogTitle
+    ogDescription
+    ogImage {
+      url
+    }
+    ogType
+    ogUrl
+  }
+}

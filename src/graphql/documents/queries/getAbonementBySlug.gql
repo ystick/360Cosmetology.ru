@@ -1,0 +1,18 @@
+query AbonementBySlug($slug: String!, $status: PublicationStatus) {
+  abonementies(filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    title
+    description
+    mainImage {
+      url
+      alternativeText
+    }
+    slug
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

@@ -1,0 +1,67 @@
+query BlogBySlug($slug: String!, $status: PublicationStatus) {
+  blogs(sort: ["datePubpublished:desc", "publishedAt:desc"], filters: { slug: { eq: $slug } }, status: $status) {
+    documentId
+    title
+    slug
+    description
+    datePubpublished
+    mainImage {
+      url
+      alternativeText
+    }
+    body {
+      ... on ComponentBlogTekstovoePoleVBelomBloke {
+        id
+        contentJsonInWhiteBlock: content
+      }
+
+      ... on ComponentBlogTekstovoePoleSBokovojLiniej {
+        id
+        contentJson: content
+      }
+
+      ... on ComponentBlogIzobrazhenieNaVsyuShirinuKontejnera {
+        id
+        contentMedia: content {
+          url
+          alternativeText
+        }
+      }
+
+      ... on ComponentBlogTekstovoePole {
+        id
+        contentJsonText: content
+      }
+    }
+    tags {
+      id
+      title
+      idLInk
+    }
+    author {
+      sotrudnik {
+        documentId
+        lastName
+        firstName
+        patronymic
+        position
+        photo {
+          alternativeText
+          url
+        }
+        priceFrom
+        slug
+        priceTo
+        createdAt
+        updatedAt
+        publishedAt
+      }
+    }
+    createdAt
+    updatedAt
+    publishedAt
+    seo {
+      ...seoFragment
+    }
+  }
+}

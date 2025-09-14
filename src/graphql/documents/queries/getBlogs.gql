@@ -1,0 +1,15 @@
+query Blogs($status: PublicationStatus) {
+  blogs(sort: ["datePubpublished:desc", "publishedAt:desc"], status: $status) {
+    documentId
+    title
+    slug
+    datePubpublished
+    mainImage {
+      url
+      alternativeText
+    }
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}
