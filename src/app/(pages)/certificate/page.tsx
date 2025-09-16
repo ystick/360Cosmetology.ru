@@ -1,14 +1,14 @@
 import { getMetadataPageBySlug } from '@config'
 import { CertificatePage } from './CertificatePage'
-import { CONTACTS_LINK } from '@constants/route.constants'
+import { CERTIFICATE_LINK } from '@constants/route.constants'
 import { fetchPageBySlug } from '@utils/api'
 
 export const revalidate = 300
 
-export const generateMetadata = async () => getMetadataPageBySlug({ puthCurrentPage: CONTACTS_LINK.href, slug: 'kontaktyi' })
+export const generateMetadata = async () => getMetadataPageBySlug({ puthCurrentPage: CERTIFICATE_LINK.href, slug: 'certificate' })
 
 export default async function Contacts() {
-  const pageData = await fetchPageBySlug('kontaktyi')
+  const pageData = await fetchPageBySlug('certificate')
 
   return (
     <>
